@@ -12,7 +12,8 @@
  */
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaInstagram } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import portfolioData from "../data/portfolioData";
 
 const Hero = () => {
@@ -20,17 +21,27 @@ const Hero = () => {
   // TO ADD A NEW SOCIAL: Add to portfolioData.social and add icon here
   const socialLinks = [
     {
-      icon: <FaGithub className="w-6 h-6" />,
+      icon: <FaGithub className="w-5 h-5" />,
       href: portfolioData.social.github,
       label: "GitHub",
     },
     {
-      icon: <FaLinkedin className="w-6 h-6" />,
+      icon: <FaLinkedin className="w-5 h-5" />,
       href: portfolioData.social.linkedin,
       label: "LinkedIn",
     },
     {
-      icon: <FaTwitter className="w-6 h-6" />,
+      icon: <FaInstagram className="w-5 h-5" />,
+      href: portfolioData.social.instagram,
+      label: "Instagram",
+    },
+    {
+      icon: <SiLeetcode className="w-5 h-5" />,
+      href: portfolioData.social.leetcode,
+      label: "LeetCode",
+    },
+    {
+      icon: <FaTwitter className="w-5 h-5" />,
       href: portfolioData.social.twitter,
       label: "Twitter",
     },
