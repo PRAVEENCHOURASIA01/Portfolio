@@ -46,7 +46,7 @@ const portfolioData = {
       "I'm a robotics software engineer with a passion for building intelligent autonomous systems. My expertise spans ROS2, computer vision, and AI integration, enabling robots to understand and interact with their environment.",
       "With a strong foundation in both software engineering and robotics, I bridge the gap between theoretical concepts and real-world applications. I thrive on solving complex problems in perception, navigation, and control systems.",
     ],
-    image: "/profile.jpg", // Add your profile image to the public folder
+    image: "/praveenpic.jpg", // Add your profile image to the public folder
   },
 
   // ============================================

@@ -13,7 +13,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import portfolioData from "../data/portfolioData";
+import { portfolioData } from "../data/portfolioData";
 
 const About = () => {
   // Hook to detect when section comes into view for animations
@@ -83,7 +83,7 @@ const About = () => {
               <div className="relative bg-gray-900 rounded-lg overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-300">
                 <img
                   src={portfolioData.about.image}
-                  alt={portfolioData.personal.name}
+                  alt={profile}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Fallback if image doesn't exist
