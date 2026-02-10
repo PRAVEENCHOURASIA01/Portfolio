@@ -77,7 +77,7 @@ const About = () => {
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               {/* Decorative border effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-lg transform rotate-6"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-cyan-400 to-purple-500 rounded-lg transform rotate-6"></div>
 
               {/* Actual image container */}
               <div className="relative bg-gray-900 rounded-lg overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-300">
@@ -91,7 +91,7 @@ const About = () => {
                   }}
                 />
                 {/* Overlay gradient for style */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent"></div>
               </div>
             </div>
 

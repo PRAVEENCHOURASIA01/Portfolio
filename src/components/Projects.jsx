@@ -67,7 +67,7 @@ const Projects = () => {
                   }}
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
 
                 {/* Featured badge (if project.featured is true) */}
                 {project.featured && (
