@@ -112,7 +112,6 @@ const portfolioData = {
       tech: ["ROS2", "Python", "C++", "Computer Vision", "Sensor Fusion", "Path Planning"],
       image: "/projects/auv.jpeg", // Add project images to public/projects/
       github: "https://github.com/yourusername/auv-project",
-      demo: "https://yourdemo.com",
       featured: true,
     },
     {
@@ -123,7 +122,6 @@ const portfolioData = {
       tech: ["ROS2", "OpenCV", "PX4", "MAVLink", "Python", "GPS Navigation"],
       image: "/projects/drone.jpeg",
       github: "https://github.com/yourusername/drone-delivery",
-      demo: "https://yourdemo.com",
       featured: true,
     },
     {
@@ -133,8 +131,7 @@ const portfolioData = {
         "Built a real-time object detection and depth estimation system combining Intel RealSense cameras with YOLO deep learning models. The system provides accurate 3D localization of objects for robotic manipulation tasks with sub-centimeter precision.",
       tech: ["Intel RealSense", "YOLO", "Python", "OpenCV", "Deep Learning", "ROS2"],
       image: "/projects/vision.jpeg",
-      github: "https://github.com/yourusername/vision-system",
-      demo: "https://yourdemo.com",
+      github: "https://github.com/PRAVEENCHOURASIA01/dlstreamer_pipeline",
       featured: true,
     },
     // Add more projects by copying the structure above
