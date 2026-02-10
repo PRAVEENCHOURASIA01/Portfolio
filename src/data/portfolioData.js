@@ -31,10 +31,12 @@ const portfolioData = {
   // Replace these URLs with your actual social media profiles
   // ============================================
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    email: "praveen@example.com",
+    github: "https://github.com/PRAVEENCHOURASIA01",
+    linkedin: "https://www.linkedin.com/in/praveen-chourasia-ba002a265/",
+    twitter: "https://x.com/pcodes007",
+    instagram: "https://www.instagram.com/_impraveeen_/",
+    leetcode: "https://leetcode.com/u/yeSgX67JHs/",
+    email: "pcodes007@gmail.com",
   },
 
   // ============================================
@@ -153,7 +155,7 @@ const portfolioData = {
   // Update your email and add a contact message
   // ============================================
   contact: {
-    email: "praveen@example.com",
+    email: "pcodes007@gmail.com",
     message:
       "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
   },

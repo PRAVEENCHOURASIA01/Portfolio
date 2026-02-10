@@ -12,7 +12,8 @@
  */
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import portfolioData from "../data/portfolioData";
 
 const Hero = () => {
@@ -35,6 +36,16 @@ const Hero = () => {
       label: "Twitter",
     },
     {
+      icon: <FaInstagram className="w-6 h-6" />,
+      href: portfolioData.social.instagram,
+      label: "Instagram",
+    },
+    {
+      icon: <SiLeetcode className="w-6 h-6" />,
+      href: portfolioData.social.leetcode,
+      label: "LeetCode",
+    },
+    {
       icon: <FaEnvelope className="w-6 h-6" />,
       href: `mailto:${portfolioData.social.email}`,
       label: "Email",
@@ -49,7 +60,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900"
     >
       {/* Animated background grid pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
