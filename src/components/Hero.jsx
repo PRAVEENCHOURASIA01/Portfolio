@@ -12,8 +12,7 @@
  */
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import portfolioData from "../data/portfolioData";
 
 const Hero = () => {
@@ -34,16 +33,6 @@ const Hero = () => {
       icon: <FaTwitter className="w-6 h-6" />,
       href: portfolioData.social.twitter,
       label: "Twitter",
-    },
-    {
-      icon: <FaInstagram className="w-6 h-6" />,
-      href: portfolioData.social.instagram,
-      label: "Instagram",
-    },
-    {
-      icon: <SiLeetcode className="w-6 h-6" />,
-      href: portfolioData.social.leetcode,
-      label: "LeetCode",
     },
     {
       icon: <FaEnvelope className="w-6 h-6" />,
