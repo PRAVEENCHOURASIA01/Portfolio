@@ -12,7 +12,7 @@
  */
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import portfolioData from "../data/portfolioData";
 
