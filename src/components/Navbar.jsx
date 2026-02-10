@@ -69,7 +69,7 @@ const Navbar = () => {
             className="text-xl font-bold text-white hover:text-cyan-400 transition-colors"
             whileHover={{ scale: 1.05 }}
           >
-            {portfolioData.personal.name}
+            pcodes007
           </motion.a>
 
           {/* Desktop Navigation Links */}
