@@ -1,22 +1,12 @@
 /**
  * ABOUT COMPONENT
- *
- * This section displays information about you with a profile image.
- *
- * WHAT YOU CAN EDIT:
- * - About text: Edit portfolioData.about.description in portfolioData.js
- * - Profile image: Replace the image path in portfolioData.about.image
- * - Layout: The component uses a two-column layout (text + image)
- * - Colors: Modify Tailwind classes for background and text colors
  */
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { portfolioData } from "../data/portfolioData";
+import portfolioData from "../data/portfolioData";
 
 const About = () => {
-  // Hook to detect when section comes into view for animations
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -37,7 +27,7 @@ const About = () => {
           <div className="w-20 h-1 bg-cyan-400 mx-auto"></div>
         </motion.div>
 
-        {/* Two-column layout: Text + Image */}
+        {/* Two-column layout */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           {/* Text content */}
@@ -46,7 +36,6 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/* Loop through description paragraphs */}
             {portfolioData.about.description.map((paragraph, index) => (
               <p
                 key={index}
@@ -56,7 +45,6 @@ const About = () => {
               </p>
             ))}
 
-            {/* Download Resume button */}
             <motion.a
               href={portfolioData.personal.resume}
               download
@@ -68,41 +56,40 @@ const About = () => {
             </motion.a>
           </motion.div>
 
-          {/* Profile image */}
+          {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Decorative border effect */}
-              <div className="absolute inset-0 bg-linear-to-br from-cyan-400 to-purple-500 rounded-lg transform rotate-6"></div>
+            <div className="relative w-full max-w-md mx-auto aspect-square">
 
-              {/* Actual image container */}
-              <div className="relative bg-gray-900 rounded-lg overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+              {/* Gradient border */}
+              <div className="absolute inset-0 bg-linear-to-br from-cyan-400 to-purple-500 rounded-lg rotate-6"></div>
+
+              {/* Image container */}
+              <div className="absolute inset-0 bg-gray-900 rounded-lg overflow-hidden -rotate-6 hover:rotate-0 transition-transform duration-300">
                 <img
                   src={portfolioData.about.image}
-                  alt={profile}
+                  alt={portfolioData.personal.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // Fallback if image doesn't exist
-                    e.target.src = "https://via.placeholder.com/400x400/1f2937/06b6d4?text=Your+Photo";
+                    e.target.src =
+                      "https://via.placeholder.com/400x400/1f2937/06b6d4?text=Profile";
                   }}
                 />
-                {/* Overlay gradient for style */}
-                <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent"></div>
               </div>
             </div>
 
-            {/* Floating stats cards (optional decoration) */}
+            {/* Floating stats */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="absolute -bottom-4 -left-4 bg-gray-900 border border-cyan-400 rounded-lg p-4 shadow-lg"
             >
-              <div className="text-cyan-400 font-bold text-2xl">2+</div>
+              <div className="text-cyan-400 font-bold text-2xl">5+</div>
               <div className="text-gray-300 text-sm">Years Experience</div>
             </motion.div>
 
@@ -112,10 +99,11 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="absolute -top-4 -right-4 bg-gray-900 border border-purple-400 rounded-lg p-4 shadow-lg"
             >
-              <div className="text-purple-400 font-bold text-2xl">4</div>
+              <div className="text-purple-400 font-bold text-2xl">50+</div>
               <div className="text-gray-300 text-sm">Projects Done</div>
             </motion.div>
           </motion.div>
+
         </div>
       </div>
     </section>
