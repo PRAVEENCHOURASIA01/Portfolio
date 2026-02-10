@@ -110,7 +110,7 @@ const portfolioData = {
       description:
         "Developed a fully autonomous underwater vehicle using ROS2 for deep-sea exploration. Implemented advanced navigation algorithms, sensor fusion, and real-time control systems. The AUV can perform autonomous missions including object detection and environmental mapping.",
       tech: ["ROS2", "Python", "C++", "Computer Vision", "Sensor Fusion", "Path Planning"],
-      image: "/projects/auv.jpg", // Add project images to public/projects/
+      image: "/projects/auv.jpeg", // Add project images to public/projects/
       github: "https://github.com/yourusername/auv-project",
       demo: "https://yourdemo.com",
       featured: true,
@@ -121,7 +121,7 @@ const portfolioData = {
       description:
         "Engineered an autonomous drone delivery system with computer vision-based landing and precision payload deployment. Integrated GPS navigation, obstacle avoidance, and real-time telemetry. Successfully completed over 100 test flights with 99% delivery accuracy.",
       tech: ["ROS2", "OpenCV", "PX4", "MAVLink", "Python", "GPS Navigation"],
-      image: "/projects/drone.jpg",
+      image: "/projects/drone.jpeg",
       github: "https://github.com/yourusername/drone-delivery",
       demo: "https://yourdemo.com",
       featured: true,
@@ -132,7 +132,7 @@ const portfolioData = {
       description:
         "Built a real-time object detection and depth estimation system combining Intel RealSense cameras with YOLO deep learning models. The system provides accurate 3D localization of objects for robotic manipulation tasks with sub-centimeter precision.",
       tech: ["Intel RealSense", "YOLO", "Python", "OpenCV", "Deep Learning", "ROS2"],
-      image: "/projects/vision.jpg",
+      image: "/projects/vision.jpeg",
       github: "https://github.com/yourusername/vision-system",
       demo: "https://yourdemo.com",
       featured: true,
