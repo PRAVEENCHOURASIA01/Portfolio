@@ -1,0 +1,144 @@
+/**
+ * INDEX.CSS - Global Styles
+ *
+ * This file contains:
+ * - Tailwind CSS directives
+ * - Custom animations
+ * - Global styles
+ * - Font imports
+ *
+ * WHAT YOU CAN EDIT:
+ * - Font family: Change the Google Fonts import
+ * - Colors: Modify CSS variables if needed
+ * - Animations: Adjust animation timings
+ */
+
+/* Tailwind CSS directives */
+@import "tailwindcss";
+
+
+/* Google Fonts - Using JetBrains Mono for code-like feel and Outfit for modern aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Base layer - global styles */
+@layer base {
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Body styles */
+  body {
+    @apply bg-gray-900 text-white;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Code and monospace text */
+  code,
+  pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-cyan-500 text-white;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  /* Blob animation for floating gradients */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* Grid background pattern */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500;
+  }
+
+  /* Card hover glow effect */
+  .card-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cyan-500;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-gray-900;
+}
+
+/* Remove focus ring for mouse users */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  @apply outline-none ring-0;
+}
+
+/* Loading animation (optional - for future use) */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
